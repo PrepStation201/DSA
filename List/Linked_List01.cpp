@@ -17,17 +17,31 @@ class LinkedList {
       head = NULL;      
     }
 
-    // Function 01
     //Function to insert newNode at the beginning of linked list
-    void push_front(int newElement)
-    {
+    void push_front(int newElement){
         Node *newNode = new Node();
         newNode->tempData = newElement;
         newNode->next = head;
         head = newNode;
     }
 
-    // Function 02
+    //function to insert a new node at the end of the linked list.
+    void push_back(int newElement) {
+      Node* newNode = new Node();
+      newNode->tempData = newElement;
+      newNode->next = NULL; 
+      if(head == NULL) {
+        head = newNode;
+      } 
+      else {
+        Node* temp = head;
+        while(temp->next != NULL){
+          temp = temp->next;
+        }
+        temp->next = newNode;
+      }    
+    }
+
     //function to display the linked list elements.
     void PrintList() {
       Node* temp = head;
@@ -44,7 +58,6 @@ class LinkedList {
       }
     } 
 
-    // Function 03
     // Insertion of newNode at a Given Position:
     void insertAt(int pos,int contain){
         int i = -1;
@@ -68,25 +81,6 @@ class LinkedList {
         return;
     }
 
-    // Function 04
-    //function to insert a new node at the end of the linked list.
-    void push_back(int newElement) {
-      Node* newNode = new Node();
-      newNode->tempData = newElement;
-      newNode->next = NULL; 
-      if(head == NULL) {
-        head = newNode;
-      } 
-      else {
-        Node* temp = head;
-        while(temp->next != NULL){
-          temp = temp->next;
-        }
-        temp->next = newNode;
-      }    
-    }
-
-    // Function 05
     //Function to search for a specific element in th LL
     int search_element(int element){
         Node* temp = head;
@@ -102,7 +96,6 @@ class LinkedList {
         return -1;
     }
 
-    // Function 06
     // function to delete a particular node with a given value
     bool deleteNode(int element){
         Node* temp = head;
@@ -122,7 +115,6 @@ class LinkedList {
         return false;
     }
 
-    // Function 07
     // Function to get length of linked list
     int getLength(){
         Node* temp = head;
@@ -135,8 +127,7 @@ class LinkedList {
 
     }
 
-    // Function 08
-    // to reverse the LL
+    // function to reverse the LL
     void reverseLL(){
 
       Node* temp1 = NULL;
@@ -152,8 +143,7 @@ class LinkedList {
       head=temp1;
     }
 
-    // Function 09
-    // Removing Duplicates:
+    // funvtion for Removing Duplicacy:
     void removeDuplicates(int num){
       Node* temp = head;
       Node *temp1 = temp->next;
@@ -177,9 +167,7 @@ class LinkedList {
         temp = temp1;
         temp1 = temp1->next;
       }
-
     }
-
 };
 
 int main() {
