@@ -1,13 +1,13 @@
 #include<iostream>
 using namespace std;
 
-int bs(int arr[],int n,int ele){    
+int binarySearch(int arr[],int n,int ele){    
 
     int mid;
-    int ub =  n-1;
-    int lb = 0;
+    int ub =  n-1;  //upper bound
+    int lb = 0;    //lower bound
 
-    while(lb<=ub){
+    while(lb <= ub){
         mid=(lb+ub)/2;
 
         if(arr[mid] == ele){
@@ -23,15 +23,15 @@ int bs(int arr[],int n,int ele){
 }
 
 int main(){
+    
     int arr[]={18,23,25,34,37,44,65,73,81,87,96};
-
     int size = sizeof(arr)/sizeof(arr[0]);
 
     int target;
-    cout<<"enter the number : ";
+    cout<<"Enter the number : ";
     cin>>target;
 
-    int search = bs(arr,size,target);
+    int search = binarySearch(arr,size,target);
 
     if(search == -1){
         cout<<"NOT found";
