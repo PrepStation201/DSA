@@ -27,7 +27,6 @@ class LinkedList {
         head = newNode;
     }
 
-    // Function 04
     //function to insert a new node at the end of the linked list.
     void push_back(int newElement) {
       Node* newNode = new Node();
@@ -45,7 +44,6 @@ class LinkedList {
       }    
     }
 
-
     //function to display the linked list elements.
     void PrintList() {
       Node* temp = head;
@@ -62,8 +60,7 @@ class LinkedList {
       }
     }  
 
-
-  //function to merge two list.
+  //function to MERGE two list.
   void merge(LinkedList l1,LinkedList l2)
   {
    Node *next_Node,*prev_Node;
@@ -138,19 +135,14 @@ class LinkedList {
   
 int main() {
   
-  LinkedList MyList1;
   LinkedList MyList2;
   LinkedList MyList3;
   LinkedList MyList4;
-  
 
   vector<int> v(10);
   int k;
-
-
   cout<<endl<<endl;  
   
-
   cout<<"Program to merge two sorted lists : -\n";
   cout<<"Enter 05 elements for List1 : \n";
   cout<<"NOTE : Enter element in incresing order to use push_back function"<<endl;
