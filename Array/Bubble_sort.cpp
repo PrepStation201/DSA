@@ -33,3 +33,6 @@ int main(){
 
 	return 0;
 }
+
+/* Time Complexity 
+	Best Case = Worst Case = Avg Case = O(N^2) */
