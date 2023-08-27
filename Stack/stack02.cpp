@@ -1,4 +1,4 @@
-// Program to find minimum element in stack in O(1)
+// Program to find minimum element inside stack in O(1)
 #include<bits/stdc++.h>
 #include<vector>
 #define n 100
