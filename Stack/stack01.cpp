@@ -1,3 +1,4 @@
+// impplementation of stack using vector
 #include<bits/stdc++.h>
 using namespace std;
 
