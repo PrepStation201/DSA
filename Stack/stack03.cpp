@@ -1,3 +1,4 @@
+// implementation of stack using CLASS
 #include<bits/stdc++.h>
 #include<stack>
 using namespace std;
